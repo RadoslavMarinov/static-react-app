@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
+import MainLayout from './components/layout/MainLayout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className='text-red-700'>
-         Hello Riko
-        </p>
-      </header>
+    <div className="relative">
+      <MainLayout/>
     </div>
   );
 }
