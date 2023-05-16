@@ -13,6 +13,8 @@ import AccessTools from "./menu-items/AccessTools";
 import AboutPayarc from "./menu-items/AboutPayarc";
 import Dashboard from "./menu-items/Dashboard";
 import PayarcTraining from "./menu-items/PayarcTraining";
+import MyPayarcSubmeny from "./submenu/MyPayarcSubmeny";
+import Search from "./menu-items/Search";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(true);
@@ -20,13 +22,15 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`${open ? "max-w-[50em]" : "max-w-[4em]"} transition-all
+      className={`${
+        open ? "max-w-[50em]" : "max-w-[4em]"
+      } transition-all
         ease-in-out
         duration-300
         rounded-lg
         text-main-color
-        relative top-4
-        left-4 h-[1048px]
+        relative top-4 left-4 
+        h-[1048px]
         shadow-menu-item
         
       `}
@@ -73,13 +77,10 @@ export default function Sidebar() {
       </div>
 
       {/* ICONS */}
-      <Dashboard  open={open}/>
-
-    
-      {/*  */}
+      <Dashboard open={open} />
 
       <div
-        className=" pl-3 cursor-pointer gap-4 hover:[&>*]:opacity-100"
+        className="pl-3 cursor-pointer gap-4 hover:[&>*]:opacity-100"
         role="listitem"
       >
         <div
@@ -88,9 +89,8 @@ export default function Sidebar() {
           onClick={() => setMyPayarcOpen((prev) => !prev)}
         >
           <div
-            className={` group px-2 py-1 rounded flex flex-row  ${
-              open ? "hover:bg-blue-200 hover:text-blue-400" : ""
-            } `}
+            className={`group px-2 py-1 rounded flex flex-row 
+            ${open ? "hover:bg-blue-200 hover:text-blue-400" : ""}`}
           >
             <div className="flex items-center hover:bg-blue-200">
               <BsLink45Deg className="text-xl" />
@@ -119,50 +119,18 @@ export default function Sidebar() {
           </div>
         </div>
 
-        {myPayarcOpen && open && (
-          <div
-            className="pt-5 border border-l-blue-400 text-main-blue"
-            data-testid="submenu"
-          >
-            <div className="flex flex-col text-sm">
-              <div>
-                <span className="hover:bg-blue-200  p-1 m-1 rounded">
-                  Overview
-                </span>
-              </div>
-              <div>
-                <span className="hover:bg-blue-200  p-1 m-1 rounded ">
-                  Apply App
-                </span>
-              </div>
-              <div>
-                <span className="hover:bg-blue-200  p-1 m-1 rounded ">
-                  My Residuals
-                </span>
-              </div>
-              <div>
-                <span className="hover:bg-blue-200  p-1 m-1 rounded ">
-                  My Merchants
-                </span>
-              </div>
-              <div>
-                <span className="hover:bg-blue-200  p-1 m-1 rounded ">
-                  Resources
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
+        {myPayarcOpen && open && <MyPayarcSubmeny />}
       </div>
 
       {/* ICONS */}
 
-      <AboutPayarc  open={open}/>
-      <PayarcTraining  open={open}/>
-      <IndustryTraining open={open}/>
-      <MarketingMaterials open={open}/>
-      <MarketingRequestForms open={open}/>
-      <AccessTools open={open}/>
+      <AboutPayarc open={open} />
+      <PayarcTraining open={open} />
+      <IndustryTraining open={open} />
+      <MarketingMaterials open={open} />
+      <MarketingRequestForms open={open} />
+      <AccessTools open={open} />
+      <Search parentOpen={open}/>
     </div>
   );
 }

@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns:{
-        "main-layout": "17em auto"
+        "main-layout": "17em auto",
+        "search-box":"28px auto"
       },
       textColor:{
         'main-color': "#737376",
