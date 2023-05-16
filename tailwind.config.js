@@ -6,10 +6,11 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns:{
-        "main-layout": "15em auto"
+        "main-layout": "17em auto"
       },
       textColor:{
-        'main-color': "#737376"
+        'main-color': "#737376",
+        'main-blue':"#63A5ED"
       },
       boxShadow:{
         "menu-item": "0px 0px 8px gray;"
