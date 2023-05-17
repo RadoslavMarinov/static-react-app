@@ -11,7 +11,7 @@ import Search from "./menu-items/Search";
 import MyPayarc from "./menu-items/MyPayarc";
 
 export default function Sidebar() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div>

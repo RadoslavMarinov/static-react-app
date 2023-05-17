@@ -1,11 +1,16 @@
+import { PropsWithChildren } from "react";
 import Sidebar from "./sidebar/Sidebar";
 
-export default function MainLayout() {
+interface Props extends PropsWithChildren {
+
+}
+
+export default function MainLayout({children}:Props) {
 
   return (
-    <div className="grid grid-cols-main-layout" id="main-layout">
+    <div className="grid grid-cols-main-layout bg-[#F5F5F5]" id="main-layout">
       <Sidebar/>
-      <div>This is the main panel</div>
+      <div>{children}</div>
     </div>
   );
 }
