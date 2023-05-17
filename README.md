@@ -1,3 +1,5 @@
+## Requirements
+  - Node.js 16 or later
 ## Info
 - [Download](https://github.com/RadoslavMarinov/static-react-app/archive/refs/heads/main.zip) the project ( zip or via `git clone`)
 - unzip/navigate to the project directory
