@@ -3,3 +3,4 @@
 - unzip/navigate to the project directory
 - Run npm install `npm i`
 - Run npm start
+- [Open the browser on localhost](http://localhost:3000/)
