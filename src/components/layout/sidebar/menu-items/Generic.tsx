@@ -11,6 +11,7 @@ function GenericItem({ open, icon, name }: Props) {
     <div
       className="group cursor-pointer my-3 hover:[&>*]:opacity-100 inline-block"
       role="listitem"
+      onClick={()=>{window.location.href = '/about'}}
     >
       <div
         className={`flex flex-row gap-4 pl-1 py-1 items-center rounded-md whitespace-nowrap ${

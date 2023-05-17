@@ -1,18 +1,17 @@
 import "./App.css";
-import Clock from "./components/cards/Clock";
-import PrimaryCard from "./components/cards/PrimaryCard";
-import SmallCards from "./components/cards/SmallCards";
 import MainLayout from "./components/layout/MainLayout";
+import Home from "./components/Home";
+import { Routes, Route } from "react-router-dom";
+import About from "./components/About";
 
 function App() {
   return (
     <div className="relative">
       <MainLayout>
-        <div className="m-10 xl:mr-24 grid grid-cols-1 gap-8">
-          <Clock></Clock>
-          <PrimaryCard />
-          <SmallCards />
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </MainLayout>
     </div>
   );
