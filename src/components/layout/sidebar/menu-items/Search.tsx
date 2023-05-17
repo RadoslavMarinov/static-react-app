@@ -19,8 +19,8 @@ export default function Search({ parentOpen }: Props) {
       data-testid="search"
       className={`
       group
-      ${open ? "border-2 border-blue-400" : "cursor-pointer"} 
-      grid grid-cols-search-box max-w-fit rounded-3xl py-1 px-2 ml-4`}
+      ${open ? "border-2 border-blue-400" : "border-2 border-transparent cursor-pointer"} 
+      grid grid-cols-search-box max-w-fit rounded-3xl py-1 px-2 `}
       onClick={() => {
         parentOpen && !open && setOpen(true);
       }}
@@ -43,7 +43,7 @@ export default function Search({ parentOpen }: Props) {
         <span
           className={`${(!parentOpen || open) && "opacity-0"} ${
             !open && "group-hover:opacity-100"
-          } absolute left-[-1px]`}
+          } absolute left-[-1px] transition-opacity duration-300 ease-in-out`}
         >
           Search
         </span>
