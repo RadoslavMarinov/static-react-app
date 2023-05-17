@@ -15,7 +15,7 @@ export function MyPayarc({parentOpen}:Props) {
   const [open, setOpen] = useState(false)
 
   return <div
-    className="pl-3 cursor-pointer gap-4 hover:[&>*]:opacity-100"
+    className="pl-0 cursor-pointer gap-4 hover:[&>*]:opacity-100"
     role="listitem"
   >
     <div

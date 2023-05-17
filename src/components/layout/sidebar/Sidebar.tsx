@@ -1,18 +1,34 @@
-import { MdArrowBackIosNew } from "react-icons/md";
-import { useState } from "react";
-import IndustryTraining from "./menu-items/IndustryTraining";
-import MarketingMaterials from "./menu-items/MarketingMaterials";
-import MarketingRequestForms from "./menu-items/MarketingRequestForms";
-import AccessTools from "./menu-items/AccessTools";
-import AboutPayarc from "./menu-items/AboutPayarc";
-import Dashboard from "./menu-items/Dashboard";
-import PayarcTraining from "./menu-items/PayarcTraining";
+import { MdArrowBackIosNew, MdOutlineFormatAlignJustify } from "react-icons/md";
+import { useEffect, useState } from "react";
 import Search from "./menu-items/Search";
 import MyPayarc from "./menu-items/MyPayarc";
+import GenericItem from "./menu-items/Generic";
+import { BsGridFill } from "react-icons/bs";
+import { FaCloudDownloadAlt, FaIndustry, FaInfo, FaTools } from "react-icons/fa";
+import { TfiBlackboard } from "react-icons/tfi";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+  
+    const handleResize = () => {
+      const {innerWidth} = window
+      console.log(innerWidth);
+      if(innerWidth<1024){
+        console.log(`BIG SCREEN`);
+        setOpen(false)
+      }
+    }
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+     window.removeEventListener('resize', handleResize);
+    };
+    
+  }, []);
+  
   return (
     <div>
       <div
@@ -69,15 +85,15 @@ export default function Sidebar() {
           )}
         </div>
 
-        <div className="relative h-4/5">
-          <Dashboard open={open} />
+        <div className="relative ml-4 h-4/5">
+          <GenericItem open={open} name="Dashboard" icon={<BsGridFill/>}/>
           <MyPayarc parentOpen={open} />
-          <AboutPayarc open={open} />
-          <PayarcTraining open={open} />
-          <IndustryTraining open={open} />
-          <MarketingMaterials open={open} />
-          <MarketingRequestForms open={open} />
-          <AccessTools open={open} />
+          <GenericItem open={open} name="About Payarc" icon={<FaInfo/>}/>
+          <GenericItem open={open} name="Payarc Training" icon={<TfiBlackboard/>}/>
+          <GenericItem open={open} name="Industry Training" icon={<FaIndustry/>}/>
+          <GenericItem open={open} name="Marketing Details" icon={<FaCloudDownloadAlt/>}/>
+          <GenericItem open={open} name="Marketing Request Forms" icon={<MdOutlineFormatAlignJustify/>}/>
+          <GenericItem open={open} name="Access Tools" icon={<FaTools/>}/>
         </div>
         <div className="grid grid-cols-1 gap-4 ml-3">
           <Search parentOpen={open} />

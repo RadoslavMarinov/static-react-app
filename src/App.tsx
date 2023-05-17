@@ -19,7 +19,7 @@ function App() {
             </div>
             <PrimaryCard />
 
-            <div className=" gap-6 justify-center xl:justify-between grid grid-cols-auto-fit">
+            <div className=" gap-6 justify-center grid lg:grid-cols-auto-fit">
              
               <div
                 aria-label="small-card"
