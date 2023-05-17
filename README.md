@@ -1,8 +1,7 @@
-## Requirements
-  - Node.js 16 or later
 ## Info
 
 ### Run the application via Node.js:
+- *This approach requires Node.js (v16 or later)*
 - [Download](https://github.com/RadoslavMarinov/static-react-app/archive/refs/heads/main.zip) the project (or clone the repository `git clone https://github.com/RadoslavMarinov/static-react-app.git`)
 - unzip/navigate to the project directory
 - Run npm install `npm i`
