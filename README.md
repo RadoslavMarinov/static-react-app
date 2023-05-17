@@ -3,7 +3,7 @@
 ## Info
 
 ### Run the application via Node.js:
-- [Download](https://github.com/RadoslavMarinov/static-react-app/archive/refs/heads/main.zip) the project (or clone the repository `git clone`)
+- [Download](https://github.com/RadoslavMarinov/static-react-app/archive/refs/heads/main.zip) the project (or clone the repository `git clone https://github.com/RadoslavMarinov/static-react-app.git`)
 - unzip/navigate to the project directory
 - Run npm install `npm i`
 - Run `npm start`
