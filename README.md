@@ -1,5 +1,5 @@
 ## Info
-
-- https://stackoverflow.com/questions/43011207/using-homepage-in-package-json-without-messing-up-paths-for-localhost
-
-- https://handsonreact.com/docs/build-deploy
+- Download the project (zip or via `git clone`)
+- navigate to the project directory
+- Run npm install `npm i`
+- Run npm start
