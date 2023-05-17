@@ -4,34 +4,31 @@ import Search from "./menu-items/Search";
 import MyPayarc from "./menu-items/MyPayarc";
 import GenericItem from "./menu-items/Generic";
 import { BsGridFill } from "react-icons/bs";
-import {
-  FaCloudDownloadAlt,
-  FaIndustry,
-  FaInfo,
-  FaTools,
-} from "react-icons/fa";
+import { FaCloudDownloadAlt, FaIndustry, FaInfo, FaTools } from "react-icons/fa";
 import { TfiBlackboard } from "react-icons/tfi";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+  
     const handleResize = () => {
-      const { innerWidth } = window;
+      const {innerWidth} = window
       console.log(innerWidth);
-      if (innerWidth < 1024) {
+      if(innerWidth<1024){
         console.log(`BIG SCREEN`);
-        setOpen(false);
+        setOpen(false)
       }
-    };
-
-    window.addEventListener("resize", handleResize);
-
+    }
+    
+    window.addEventListener('resize', handleResize);
+    
     return () => {
-      window.removeEventListener("resize", handleResize);
+     window.removeEventListener('resize', handleResize);
     };
+    
   }, []);
-
+  
   return (
     <div>
       <div
@@ -90,30 +87,14 @@ export default function Sidebar() {
         </div>
 
         <div className="relative ml-4 h-4/5">
-          <GenericItem open={open} name="Dashboard" icon={<BsGridFill />} />
+          <GenericItem open={open} name="Dashboard" icon={<BsGridFill/>}/>
           <MyPayarc parentOpen={open} />
-          <GenericItem open={open} name="About Payarc" icon={<FaInfo />} />
-          <GenericItem
-            open={open}
-            name="Payarc Training"
-            icon={<TfiBlackboard />}
-          />
-          <GenericItem
-            open={open}
-            name="Industry Training"
-            icon={<FaIndustry />}
-          />
-          <GenericItem
-            open={open}
-            name="Marketing Details"
-            icon={<FaCloudDownloadAlt />}
-          />
-          <GenericItem
-            open={open}
-            name="Marketing Request Forms"
-            icon={<MdOutlineFormatAlignJustify />}
-          />
-          <GenericItem open={open} name="Access Tools" icon={<FaTools />} />
+          <GenericItem open={open} name="About Payarc" icon={<FaInfo/>}/>
+          <GenericItem open={open} name="Payarc Training" icon={<TfiBlackboard/>}/>
+          <GenericItem open={open} name="Industry Training" icon={<FaIndustry/>}/>
+          <GenericItem open={open} name="Marketing Details" icon={<FaCloudDownloadAlt/>}/>
+          <GenericItem open={open} name="Marketing Request Forms" icon={<MdOutlineFormatAlignJustify/>}/>
+          <GenericItem open={open} name="Access Tools" icon={<FaTools/>}/>
         </div>
         <div className="grid grid-cols-1 gap-4 ml-3">
           <Search parentOpen={open} />
@@ -121,13 +102,10 @@ export default function Sidebar() {
             <span className="bg-[#131741] text-white rounded-full p-[9px] text-xs">
               JD
             </span>
-            {open ? (
-              <span className="">John Doe</span>
-            ) : (
-              <span className="group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">
-                Profile
-              </span>
-            )}
+            {open ? 
+            <span className="">John Doe</span> : <span className="group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">Profile</span>}
+            
+            
           </div>
         </div>
       </div>

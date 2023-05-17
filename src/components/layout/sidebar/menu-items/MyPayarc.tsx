@@ -25,10 +25,9 @@ export function MyPayarc({parentOpen}:Props) {
     >
       <div
         className={`group px-2 py-1 rounded flex flex-row 
-        ${parentOpen ? "hover:bg-blue-200 hover:text-blue-400" : ""}
-        `}
+        ${parentOpen ? "hover:bg-blue-200 hover:text-blue-400" : ""}`}
       >
-        <div className="flex items-center ">
+        <div className="flex items-center hover:bg-blue-200">
           <BsLink45Deg className="text-xl" />
         </div>
         <span
