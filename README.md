@@ -14,4 +14,4 @@
 - [Download](https://github.com/RadoslavMarinov/static-react-app/archive/refs/heads/main.zip) the project
 - unzip
 - navigate to the unizped directory `cd static-react-app-main/build`
-- open index.html in browser
+- open **index.html** in browser
