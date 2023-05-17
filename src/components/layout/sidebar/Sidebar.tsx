@@ -25,6 +25,7 @@ export default function Sidebar() {
         h-screen
         shadow-menu-item
         mx-4
+        bg-white
       `}
         data-testid="sidebar"
       >

@@ -9,7 +9,7 @@ module.exports = {
         "main-layout": "18em auto",
         "search-box":"28px auto",
         "menu-item":"35px 5em",
-        "auto-fit": "repeat(auto-fit, minmax(200px, 300px))",
+        "auto-fit": "repeat(auto-fit, minmax(280px, 400px))",
         "primary-card":"250px auto",
       },
       textColor:{

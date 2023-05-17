@@ -1,7 +1,7 @@
 function PrimaryCard() {
   return (
     <div
-      className="shadow-menu-item rounded-xl p-10 gap-10  lg:gap-0 grid lg:grid-cols-primary-card grid-cols-1 flex-wrap items-center"
+      className="bg-white shadow-menu-item rounded-xl p-10 gap-10  lg:gap-0 grid lg:grid-cols-primary-card grid-cols-1 flex-wrap items-center"
       aria-label="main-card"
     >
       <div aria-label="logo-area" className="flex flex-col items-center">
