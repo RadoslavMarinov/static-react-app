@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       gridTemplateColumns:{
         "main-layout": "18em auto",
-        "mobile-layout": "64px auto",
+        "mobile-layout": "100px auto",
         "search-box":"28px auto",
         "menu-item":"35px 5em",
         "auto-fit": "repeat(auto-fit, minmax(200px, 400px))",

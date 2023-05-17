@@ -6,7 +6,7 @@ function PrimaryCard() {
     >
       <div aria-label="logo-area" className="flex flex-col items-center">
         <div
-          className="relative w-[180px] h-[180px]
+          className="relative md:w-[180px] md:h-[180px] w-[100px] h-[100px]
           bg-[url('/public/p-logo.png')] bg-contain bg-no-repeat"
         ></div>
       </div>

@@ -34,6 +34,7 @@ export default function Sidebar() {
       <div
         className={`${open ? "max-w-[256px]" : "max-w-[4em]"} transition-all
         ease-in-out
+        z-10
         duration-300
         rounded-lg
         text-main-color
